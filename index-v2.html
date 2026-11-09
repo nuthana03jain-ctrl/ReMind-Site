@@ -103,7 +103,7 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
 /* ---------- 3. Type helpers ---------- */
 .h2{font-size:34px;line-height:1.12;letter-spacing:-0.01em}
 @media (min-width:768px){ .h2{font-size:50px} }
-.lead{font-size:19px;max-width:560px;opacity:.9}
+.lead{font-size:19px;max-width:560px;opacity:.9;margin-top:var(--s2)}
 @media (min-width:768px){ .lead{font-size:20px} }
 .center{text-align:center}
 .center .lead{margin-left:auto;margin-right:auto}
@@ -204,14 +204,6 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
 .hero-ctas .btn{width:100%}
 .hero-ctas-note{display:flex;align-items:center;gap:8px;margin:var(--s2) 0 0;font-size:15px;color:var(--cream-soft)}
 .hero-ctas-note .icon{width:18px;height:18px;color:var(--blush)}
-.trust-row{display:grid;gap:10px;margin-top:var(--s4)}
-.trust-chip{
-  display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:center;padding:12px 16px;border-radius:var(--r-sm);
-  background:var(--glass);border:1px solid var(--glass-line);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
-}
-.trust-chip .icon{grid-row:span 2;width:20px;height:20px;color:var(--blush)}
-.trust-chip strong{font-size:15px;font-weight:600;line-height:1.3}
-.trust-chip span{font-size:14px;color:var(--cream-soft);line-height:1.35}
 
 .hero-media{position:relative}
 .hero-frame{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/5;background:var(--deep-wine)}
@@ -242,19 +234,7 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
 }
 .mood-out a{color:var(--blush);font-style:normal;font-weight:600;text-underline-offset:3px;white-space:nowrap}
 
-@media (max-width:639px){
-  .trust-row{grid-template-columns:repeat(3,1fr);gap:8px}
-  .trust-chip{grid-template-columns:1fr;justify-items:center;text-align:center;gap:6px;padding:12px 8px}
-  .trust-chip .icon{grid-row:auto}
-  .trust-chip strong{font-size:13.5px}
-  .trust-chip span{display:none}
-  .hero-frame{aspect-ratio:5/4}
-}
-@media (min-width:640px){
-  .trust-row{grid-template-columns:repeat(3,1fr)}
-  .trust-chip{grid-template-columns:1fr;gap:6px}
-  .trust-chip .icon{grid-row:auto}
-}
+@media (max-width:639px){ .hero-frame{aspect-ratio:5/4} }
 @media (min-width:768px){
   .hero-shell{padding:var(--s8) 0 var(--s6)}
   .hero-title .word{font-size:96px}
@@ -275,43 +255,6 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
 @media (min-width:768px) and (max-width:1023px){
   .hero-media{max-width:520px;margin-left:auto}
   .mood{left:-24px}
-}
-
-/* ---------- 8. Sound familiar + stats ---------- */
-.familiar{overflow:hidden}
-.bg-word{
-  position:absolute;left:50%;top:50%;transform:translate(-50%,-58%);z-index:0;pointer-events:none;user-select:none;
-  font-family:var(--serif-display);font-size:30vw;line-height:1;letter-spacing:-.03em;color:rgba(110,20,32,.045);white-space:nowrap;
-}
-.familiar .container{position:relative;z-index:1}
-.familiar-head{display:flex;flex-direction:column;align-items:center;margin-bottom:var(--s5)}
-.familiar-head .h2{max-width:16ch}
-.familiar-list{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;max-width:980px;margin:0 auto}
-.familiar-item{
-  display:flex;align-items:center;gap:14px;padding:12px 22px 12px 12px;border-radius:999px;
-  background:var(--ivory);border:1px solid var(--wine-line);box-shadow:var(--shadow-sm);font-size:17px;line-height:1.4;
-  transition:transform .5s var(--ease-out), box-shadow .5s var(--ease-out);
-}
-.familiar-item .ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--cream);color:var(--wine);flex:none}
-@media (hover:hover){ .familiar-item:hover{transform:translateY(-3px);box-shadow:var(--shadow)} }
-.familiar-close{text-align:center;font-family:var(--serif-display);font-size:24px;line-height:1.35;margin:var(--s5) auto 0;max-width:30ch}
-.familiar-close em{font-style:italic;color:var(--wine)}
-
-.stats{display:grid;grid-template-columns:1fr 1fr;margin:var(--s8) auto 0;max-width:1000px;border-top:1px solid var(--wine-line)}
-.stat{padding:var(--s3) var(--s2) 0;text-align:center}
-.stat:nth-child(odd){border-right:1px solid var(--wine-line)}
-.stat:nth-child(n+3){border-top:1px solid var(--wine-line);padding-bottom:0}
-.stat b{display:block;font-family:var(--serif-display);font-weight:500;font-size:44px;line-height:1.1;color:var(--wine)}
-.stat span{display:block;font-size:15px;line-height:1.4;margin-top:4px;opacity:.85}
-.stats{padding-bottom:var(--s1)}
-@media (min-width:768px){
-  .familiar-item{font-size:18px}
-  .familiar-close{font-size:28px}
-  .stats{grid-template-columns:repeat(4,1fr);border-top:0}
-  .stat{border-right:1px solid var(--wine-line);padding:var(--s2) var(--s3)}
-  .stat:last-child{border-right:0}
-  .stat:nth-child(n+3){border-top:0}
-  .stat b{font-size:56px}
 }
 
 /* ---------- 9. How it works: "Your ReMind week" widget ---------- */
@@ -350,7 +293,9 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
 .day-row h4{margin:0;font-family:var(--serif-display);font-weight:500;font-size:18px;line-height:1.25}
 .day-row p{margin:2px 0 0;font-size:14.5px;line-height:1.4;opacity:.8}
 .day-row .tag{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:6px 10px;border-radius:999px;background:var(--cream);white-space:nowrap}
-.day-row.is-active{border-color:var(--wine);transform:translateX(4px)}
+.day-row{display:none}
+.day-row.is-active,html:not(.js) .day-row{display:grid}
+.day-row.is-active{border-color:var(--wine)}
 .day-row.is-rest .ic{background:#F3E6DA}
 .day-row.is-live{background:var(--wine);color:var(--cream)}
 .day-row.is-live .ic{background:var(--blush);color:var(--wine)}
@@ -540,7 +485,6 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
 .js [data-reveal] .stagger > *{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease-out), transform .7s var(--ease-out), box-shadow .4s ease, border-color .3s ease, background-color .3s ease;transition-delay:calc(var(--i,0) * 70ms + 150ms)}
 .js [data-reveal].is-visible .stagger > *{opacity:1;transform:none}
 .js [data-reveal] .stagger.stagger-done > *{transition-delay:0s}
-.js [data-reveal].is-visible .stagger.stagger-done > .day-row.is-active{transform:translateX(4px)}
 @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 @keyframes settle{from{transform:scale(1.1)}to{transform:scale(1)}}
 .hero-copy > *{animation:rise .8s var(--ease-out) both}
@@ -657,11 +601,6 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
             <a class="btn btn-glass" href="#join" data-focus-form><span>Book your first consultation</span><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg></span></a>
           </div>
           <p class="hero-ctas-note"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg>No fees to join, and your first one-on-one consultation is on us.</p>
-          <ul class="trust-row">
-            <li class="trust-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg><strong>Psychologist-led</strong><span>Expert guidance, every week</span></li>
-            <li class="trust-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg><strong>A few minutes a day</strong><span>Fits around your life</span></li>
-            <li class="trust-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg><strong>No fees</strong><span>Program and first consultation</span></li>
-          </ul>
         </div>
 
         <div class="hero-media">
@@ -685,40 +624,13 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
     </div>
   </section>
 
-  <!-- ============ SOUND FAMILIAR + STATS ============ -->
-  <section class="section familiar" id="familiar" aria-labelledby="familiar-title">
-    <span class="bg-word" aria-hidden="true">remind</span>
-    <div class="container" data-reveal>
-      <div class="familiar-head center">
-        <p class="pill-label"><span class="dot"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg></span>Sound familiar?</p>
-        <h2 class="h2" id="familiar-title">Lately, your mind has a mind of its own</h2>
-      </div>
-      <ul class="familiar-list stagger">
-        <li class="familiar-item"><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-door"/></svg></span>You walk into a room and forget why you came.</li>
-        <li class="familiar-item"><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-scale"/></svg></span>Small decisions feel bigger than they used to.</li>
-        <li class="familiar-item"><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cloud"/></svg></span>Your mind feels foggy, even after a full night’s sleep.</li>
-        <li class="familiar-item"><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wind"/></svg></span>Stress builds up faster than before.</li>
-        <li class="familiar-item"><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-home"/></svg></span>You’re looking after everyone, but rarely yourself.</li>
-      </ul>
-      <p class="familiar-close">You’re not alone, and none of this is your fault. <em>There are practical ways to help.</em></p>
-
-      <dl class="stats stagger">
-        <div class="stat"><dt class="visually-hidden">Length</dt><dd style="margin:0"><b>6</b><span>weeks of guided support</span></dd></div>
-        <div class="stat"><dt class="visually-hidden">Daily time</dt><dd style="margin:0"><b>5–10</b><span>minutes on most days</span></dd></div>
-        <div class="stat"><dt class="visually-hidden">Live session</dt><dd style="margin:0"><b>45</b><span>minute live group session each week</span></dd></div>
-        <div class="stat"><dt class="visually-hidden">Cost</dt><dd style="margin:0"><b>₹0</b><span>to join, first consultation included</span></dd></div>
-      </dl>
-    </div>
-  </section>
-
   <!-- ============ HOW IT WORKS ============ -->
-  <section class="section" id="how-it-works" aria-labelledby="how-title" style="padding-top:0">
+  <section class="section" id="how-it-works" aria-labelledby="how-title">
     <div class="container week-grid" data-reveal>
       <div class="week-copy">
         <p class="pill-label"><span class="dot"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg></span>How it works</p>
         <h2 class="h2" id="how-title">A week that fits into your chai break</h2>
         <p class="lead">One topic each week, explored in small daily moments.</p>
-        <p class="note"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg><span>Most days take just a few minutes, wherever you are. Miss one? Every activity stands on its own.</span></p>
         <a class="btn btn-wine" href="#join"><span>Join ReMind</span><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevs"/></svg></span></a>
       </div>
 
@@ -735,7 +647,7 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
             <button class="day-btn" type="button" aria-pressed="false" aria-controls="day-7" data-day="7"><small>Day</small><b>7</b></button>
           </div>
         </div>
-        <ol class="day-list stagger">
+        <ol class="day-list" aria-live="polite">
           <li class="day-row is-active" id="day-1" data-day="1"><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg></span><div><h4>Make sense of it</h4><p>Discover what’s changing, and why</p></div><span class="tag">Day 1</span></li>
           <li class="day-row" id="day-2" data-day="2"><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-puzzle"/></svg></span><div><h4>Play with it</h4><p>A quick, playful challenge on WhatsApp</p></div><span class="tag">Day 2</span></li>
           <li class="day-row" id="day-3" data-day="3"><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-compass"/></svg></span><div><h4>Find what helps</h4><p>Simple strategies that make a difference</p></div><span class="tag">Day 3</span></li>
@@ -862,24 +774,8 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
           <div class="faq-a" id="faq-a9" role="region" aria-labelledby="faq-q9"><div class="faq-a-inner"><p>No. There are no fees to join ReMind, and your first one-on-one consultation is on us too.</p></div></div>
         </div>
         <div class="faq-item">
-          <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Do I need to be good with technology?<span class="chev" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-down"/></svg></span></button></h3>
-          <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><div class="faq-a-inner"><p>No. If you can use WhatsApp, you can join. We’ll help you with the online sessions.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">What if I miss a day?<span class="chev" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-down"/></svg></span></button></h3>
-          <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><div class="faq-a-inner"><p>That’s fine. Every activity stands on its own, and there’s a rest day each week.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">Do I have to share personal things?<span class="chev" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-down"/></svg></span></button></h3>
-          <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><div class="faq-a-inner"><p>Never. Activities use made-up characters, and sharing is always optional.</p></div></div>
-        </div>
-        <div class="faq-item">
           <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">Is this medical treatment?<span class="chev" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-down"/></svg></span></button></h3>
           <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6"><div class="faq-a-inner"><p>No. ReMind is an educational wellness program. Please speak to your doctor about any health concerns.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a7" id="faq-q7">What happens to my information?<span class="chev" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-down"/></svg></span></button></h3>
-          <div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7"><div class="faq-a-inner"><p>It’s used only to run the program and is never shared.</p></div></div>
         </div>
       </div>
     </div>
@@ -897,8 +793,6 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
           <ul class="join-benefits">
             <li><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></span><span>Practical strategies to support memory and focus</span></li>
             <li><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></span><span>Calmer ways to handle stress and overwhelm</span></li>
-            <li><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></span><span>Confidence to set boundaries and ask for what you need</span></li>
-            <li><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></span><span>A realistic routine for sleep, nutrition and wellbeing</span></li>
             <li><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></span><span>A warm community of women going through the same changes</span></li>
           </ul>
         </div>
