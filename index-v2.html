@@ -153,18 +153,7 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
 }
 .btn:active{transform:scale(.98)}
 
-/* ---------- 5. Top contact strip ---------- */
-.strip{background:var(--deep-wine);color:var(--cream);font-size:14px}
-.strip-inner{display:flex;align-items:center;justify-content:center;gap:var(--s3);min-height:40px}
-.strip a{display:inline-flex;align-items:center;gap:8px;min-height:40px;text-decoration:none;opacity:.9}
-.strip a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}
-.strip .icon{width:16px;height:16px}
-.strip-note{display:none;margin:0;opacity:.8}
-.strip .email-text{display:none}
-@media (min-width:560px){ .strip .email-text{display:inline} }
-@media (min-width:900px){ .strip-note{display:block;margin-right:auto} .strip-inner{justify-content:flex-end} }
-
-/* ---------- 6. Header ---------- */
+/* ---------- 5. Header ---------- */
 .site-header{
   position:sticky;top:0;z-index:100;height:var(--nav-h);
   background:rgba(246,234,223,.82);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);
@@ -178,7 +167,6 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
 .nav-links a{display:inline-flex;align-items:center;min-height:42px;padding:0 18px;border-radius:999px;text-decoration:none;font-size:16px;transition:background-color .25s ease,color .25s ease}
 .nav-links a:hover{background:var(--cream)}
 .nav-actions{display:flex;align-items:center;gap:8px}
-.nav-consult{display:none}
 .menu-btn{
   width:48px;height:48px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--wine-line);
   background:var(--ivory);border-radius:50%;cursor:pointer;color:var(--deep-wine);
@@ -199,7 +187,6 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
 .menu-panel:not([hidden]){animation:menuIn .4s var(--ease-out)}
 @media (min-width:1024px){
   .nav-links{display:flex}
-  .nav-consult{display:inline-flex}
   .menu-btn,.menu-panel{display:none !important}
   .logo img{height:44px}
 }
@@ -439,17 +426,6 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
 
 /* ---------- 11. FAQ ---------- */
 .faq-grid{display:grid;gap:var(--s5)}
-.help-card{margin-top:var(--s4);padding:var(--s3);border-radius:var(--r-lg);background:var(--ivory);border:1px solid var(--wine-line);box-shadow:var(--shadow-sm)}
-.help-card h3{font-size:22px;margin-bottom:6px}
-.help-card p{font-size:16px;opacity:.85}
-.help-links{display:grid;gap:4px;margin:var(--s2) 0 var(--s3)}
-.help-links a{display:flex;align-items:center;gap:12px;min-height:48px;text-decoration:none;font-size:16px;border-bottom:1px solid var(--wine-line)}
-.help-links a:last-child{border-bottom:0}
-.help-links a:hover span{text-decoration:underline;text-underline-offset:3px}
-.help-links .ic{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--cream);color:var(--wine);flex:none}
-.help-links .ic .icon{width:17px;height:17px}
-.help-card .btn{width:100%}
-
 .faq-list{display:grid;gap:10px}
 .faq-item{background:var(--ivory);border:1px solid var(--wine-line);border-radius:var(--r);padding:0 var(--s3);transition:background-color .3s ease, box-shadow .3s ease}
 .faq-item:has([aria-expanded="true"]){background:#fff;box-shadow:var(--shadow-sm)}
@@ -480,19 +456,11 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
 .join-benefits li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;font-size:17px}
 .join-benefits .ic{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--blush);color:var(--wine);margin-top:1px}
 .join-benefits .ic .icon{width:16px;height:16px;stroke-width:2.2}
-.join-alt{
-  display:flex;align-items:center;gap:14px;margin-top:var(--s4);padding:14px 16px;border-radius:var(--r);
-  background:var(--glass);border:1px solid var(--glass-line);text-decoration:none;
-}
-.join-alt .ic{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--cream);color:var(--wine);flex:none}
-.join-alt strong{display:block;font-size:16px}
-.join-alt span{display:block;font-size:14.5px;color:var(--cream-soft)}
-.join-alt .go{margin-left:auto;transition:transform .4s var(--ease-out)}
-.join-alt:hover .go{transform:translateX(4px)}
-
 .join-card{background:var(--ivory);color:var(--deep-wine);border-radius:var(--r-lg);padding:var(--s4) var(--s3);box-shadow:0 30px 60px rgba(30,4,8,.35)}
-.join-card-head{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);margin-bottom:var(--s3);padding-bottom:var(--s2);border-bottom:1px solid var(--wine-line)}
+.join-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s2);margin-bottom:var(--s3);padding-bottom:var(--s2);border-bottom:1px solid var(--wine-line)}
 .join-card-head h3{font-size:24px}
+.join-card-sub{margin:4px 0 0;font-size:15.5px;line-height:1.45;opacity:.85}
+.faq-intro{font-size:19px;opacity:.85;margin:var(--s2) 0 var(--s4);max-width:28ch}
 .join-card-head span{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:var(--cream);white-space:nowrap}
 @media (min-width:768px){ .join-card{padding:var(--s5)} .join-intro .script{font-size:80px} }
 @media (min-width:1024px){
@@ -553,7 +521,7 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
 .legal{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s1) var(--s3);font-size:15px;color:var(--cream-soft)}
 .legal a{display:inline-flex;align-items:center;min-height:44px;text-underline-offset:4px}
 .legal p{margin:0 auto 0 0}
-@media (min-width:768px){ .site-footer{padding-bottom:var(--s6)} .foot-grid{grid-template-columns:1.3fr 1fr 1fr} }
+@media (min-width:768px){ .site-footer{padding-bottom:var(--s6)} .foot-grid{grid-template-columns:1.6fr 1fr} }
 
 /* ---------- 14. Mobile sticky bar ---------- */
 .mobile-cta{
@@ -564,7 +532,6 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
 }
 .mobile-cta.is-shown{transform:none;visibility:visible;transition:transform .35s var(--ease-out)}
 .mobile-cta .btn{flex:1}
-.mobile-cta .cal{width:54px;height:54px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--blush);color:var(--wine);text-decoration:none}
 @media (min-width:768px){ .mobile-cta{display:none} }
 
 /* ---------- 15. Motion ---------- */
@@ -638,16 +605,6 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
 </svg>
 
-<!-- ============ CONTACT STRIP ============ -->
-<div class="strip">
-  <div class="container strip-inner">
-    <p class="strip-note">Questions about ReMind? We’re happy to help.</p>
-    <a href="tel:+916366573772"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>+91 63665 73772</span></a>
-    <a href="mailto:info@mystree.org" aria-label="Email info@mystree.org"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span class="email-text">info@mystree.org</span></a>
-    <a href="https://www.instagram.com/mystreeforyou/" target="_blank" rel="noopener" aria-label="MyStree on Instagram (opens in a new tab)"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-instagram"/></svg></a>
-  </div>
-</div>
-
 <!-- ============ HEADER ============ -->
 <header class="site-header" id="site-header">
   <div class="container nav">
@@ -662,7 +619,6 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
     </nav>
 
     <div class="nav-actions">
-      <a class="btn btn-ghost btn-sm nav-consult" href="https://my-stree.com/booking" target="_blank" rel="noopener"><span>Book consultation</span><span class="visually-hidden"> (opens in a new tab)</span><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg></span></a>
       <a class="btn btn-wine btn-sm nav-join" href="#join"><span>Join ReMind</span><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevs"/></svg></span></a>
       <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
         <svg class="icon icon-open" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg>
@@ -680,7 +636,6 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
       </ul>
       <div class="menu-ctas">
         <a class="btn btn-wine" href="#join"><span>Join ReMind</span><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevs"/></svg></span></a>
-        <a class="btn btn-ghost" href="https://my-stree.com/booking" target="_blank" rel="noopener"><span>Book first consultation</span><span class="visually-hidden"> (opens in a new tab)</span><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg></span></a>
       </div>
     </nav>
   </div>
@@ -699,13 +654,13 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
           <p class="hero-sub">A psychologist-led program that helps women through perimenopause and menopause with simple, everyday strategies for memory, focus, stress, sleep and wellbeing.</p>
           <div class="hero-ctas">
             <a class="btn btn-blush" href="#join"><span>Join ReMind</span><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevs"/></svg></span></a>
-            <a class="btn btn-glass" href="https://my-stree.com/booking" target="_blank" rel="noopener"><span>Book your first consultation</span><span class="visually-hidden"> (opens in a new tab)</span><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg></span></a>
+            <a class="btn btn-glass" href="#join" data-focus-form><span>Book your first consultation</span><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg></span></a>
           </div>
-          <p class="hero-ctas-note"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg>New to MyStree? Meet a specialist one-on-one, in Indiranagar or by video call.</p>
+          <p class="hero-ctas-note"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg>No fees to join, and your first one-on-one consultation is on us.</p>
           <ul class="trust-row">
             <li class="trust-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg><strong>Psychologist-led</strong><span>Expert guidance, every week</span></li>
             <li class="trust-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg><strong>A few minutes a day</strong><span>Fits around your life</span></li>
-            <li class="trust-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone-sm"/></svg><strong>On WhatsApp</strong><span>Plus a weekly live session</span></li>
+            <li class="trust-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg><strong>No fees</strong><span>Program and first consultation</span></li>
           </ul>
         </div>
 
@@ -751,7 +706,7 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
         <div class="stat"><dt class="visually-hidden">Length</dt><dd style="margin:0"><b>6</b><span>weeks of guided support</span></dd></div>
         <div class="stat"><dt class="visually-hidden">Daily time</dt><dd style="margin:0"><b>5–10</b><span>minutes on most days</span></dd></div>
         <div class="stat"><dt class="visually-hidden">Live session</dt><dd style="margin:0"><b>45</b><span>minute live group session each week</span></dd></div>
-        <div class="stat"><dt class="visually-hidden">Topics</dt><dd style="margin:0"><b>6</b><span>topics, one for each week</span></dd></div>
+        <div class="stat"><dt class="visually-hidden">Cost</dt><dd style="margin:0"><b>₹0</b><span>to join, first consultation included</span></dd></div>
       </dl>
     </div>
   </section>
@@ -885,16 +840,8 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
       <div class="faq-side">
         <p class="pill-label"><span class="dot"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg></span>FAQs</p>
         <h2 class="h2" id="faq-title">Still wondering?</h2>
-        <div class="help-card">
-          <h3>Talk to a real person</h3>
-          <p>Can’t find your answer? We’re happy to help.</p>
-          <div class="help-links">
-            <a href="https://wa.me/916366573772?text=Hi%20My%20Stree%2C%20I%20have%20a%20question%20about%20ReMind." target="_blank" rel="noopener"><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg></span><span>Message us on WhatsApp</span><span class="visually-hidden"> (opens in a new tab)</span></a>
-            <a href="tel:+916366573772"><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg></span><span>+91 63665 73772</span></a>
-            <a href="mailto:info@mystree.org"><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg></span><span>info@mystree.org</span></a>
-          </div>
-          <a class="btn btn-wine" href="https://my-stree.com/booking" target="_blank" rel="noopener"><span>Book first consultation</span><span class="visually-hidden"> (opens in a new tab)</span><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg></span></a>
-        </div>
+        <p class="faq-intro">Everything you need to know before you join.</p>
+        <a class="btn btn-wine" href="#join"><span>Join ReMind</span><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevs"/></svg></span></a>
       </div>
 
       <div class="faq-list">
@@ -909,6 +856,10 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
         <div class="faq-item">
           <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">How much time does it take?<span class="chev" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-down"/></svg></span></button></h3>
           <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><div class="faq-a-inner"><p>About 5–10 minutes on most days, plus a 45-minute live session once a week.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a9" id="faq-q9">Does it cost anything?<span class="chev" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-down"/></svg></span></button></h3>
+          <div class="faq-a" id="faq-a9" role="region" aria-labelledby="faq-q9"><div class="faq-a-inner"><p>No. There are no fees to join ReMind, and your first one-on-one consultation is on us too.</p></div></div>
         </div>
         <div class="faq-item">
           <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Do I need to be good with technology?<span class="chev" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-down"/></svg></span></button></h3>
@@ -942,7 +893,7 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
           <p class="pill-label"><span class="dot"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg></span>Join</p>
           <h2 class="h2" id="join-title">Come as you are. Leave a little lighter.</h2>
           <span class="script" aria-hidden="true">begin</span>
-          <p>Join the next ReMind group. It only takes a minute to sign up.</p>
+          <p>Join the next ReMind group. It only takes a minute to sign up, and there are no fees.</p>
           <ul class="join-benefits">
             <li><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></span><span>Practical strategies to support memory and focus</span></li>
             <li><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></span><span>Calmer ways to handle stress and overwhelm</span></li>
@@ -950,16 +901,10 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
             <li><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></span><span>A realistic routine for sleep, nutrition and wellbeing</span></li>
             <li><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></span><span>A warm community of women going through the same changes</span></li>
           </ul>
-          <a class="join-alt" href="https://my-stree.com/booking" target="_blank" rel="noopener">
-            <span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg></span>
-            <span><strong>Not sure yet?</strong><span>Book a first consultation with a MyStree specialist</span></span>
-            <svg class="icon go" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-            <span class="visually-hidden"> (opens in a new tab)</span>
-          </a>
         </div>
 
         <div class="join-card" id="join-card">
-          <div class="join-card-head"><h3>Sign up for ReMind</h3><span>1 minute</span></div>
+          <div class="join-card-head"><div><h3>Join ReMind</h3><p class="join-card-sub">Your first one-on-one consultation is on us. We’ll arrange it on WhatsApp after you sign up.</p></div><span>₹0</span></div>
           <form id="join-form" novalidate>
             <div class="form-grid">
 
@@ -1072,22 +1017,10 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
         <p>ReMind is a psychologist-led program by MyStree for women in perimenopause and menopause.</p>
       </div>
       <div class="foot-col">
-        <h3>Contact</h3>
+        <h3>Questions?</h3>
         <ul>
           <li><a href="tel:+916366573772"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>+91 63665 73772</a></li>
           <li><a href="mailto:info@mystree.org"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>info@mystree.org</a></li>
-          <li><a href="https://wa.me/916366573772" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>WhatsApp<span class="visually-hidden"> (opens in a new tab)</span></a></li>
-          <li><address><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg><span>HAL 2nd Stage, Indiranagar,<br>Bengaluru, Karnataka 560008</span></address></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h3>Explore</h3>
-        <ul>
-          <li><a href="#how-it-works">How it works</a></li>
-          <li><a href="#program">The program</a></li>
-          <li><a href="#faq">FAQs</a></li>
-          <li><a href="https://my-stree.com/booking" target="_blank" rel="noopener">Book a consultation<span class="visually-hidden"> (opens in a new tab)</span></a></li>
-          <li><a href="https://www.instagram.com/mystreeforyou/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-instagram"/></svg>@mystreeforyou<span class="visually-hidden"> on Instagram (opens in a new tab)</span></a></li>
         </ul>
       </div>
     </div>
@@ -1106,7 +1039,6 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
 <!-- ============ MOBILE STICKY BAR ============ -->
 <div class="mobile-cta" id="mobile-cta">
   <a class="btn btn-wine" href="#join"><span>Join ReMind</span><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevs"/></svg></span></a>
-  <a class="cal" href="https://my-stree.com/booking" target="_blank" rel="noopener" aria-label="Book your first consultation (opens in a new tab)"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg></a>
 </div>
 
 <script>
@@ -1270,6 +1202,16 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
   window.addEventListener('resize', onScroll);
   onScrollHeader();
   onScrollBar();
+
+  /* ---------- Consultation button: go to the sign-up form, ready to type ---------- */
+  document.querySelectorAll('[data-focus-form]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      join.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      var name = document.getElementById('f-name');
+      if (name) setTimeout(function () { name.focus({ preventScroll: true }); }, reduceMotion ? 0 : 600);
+    });
+  });
 
   /* ---------- 8. FAQ accordion (one open at a time) ---------- */
   var faqButtons = document.querySelectorAll('.faq-q');
