@@ -369,31 +369,10 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
   .week-tab[aria-selected="true"]{background:var(--cream)}
 }
 
-/* ---------- 11. FAQ ---------- */
-.faq-grid{display:grid;gap:var(--s5)}
-.faq-list{display:grid;gap:10px}
-.faq-item{background:var(--ivory);border:1px solid var(--wine-line);border-radius:var(--r);padding:0 var(--s3);transition:background-color .3s ease, box-shadow .3s ease}
-.faq-item:has([aria-expanded="true"]){background:#fff;box-shadow:var(--shadow-sm)}
-.faq-q{
-  width:100%;display:flex;align-items:center;justify-content:space-between;gap:var(--s2);background:none;border:0;
-  padding:18px 0;min-height:64px;text-align:left;cursor:pointer;font-family:var(--serif-display);font-size:20px;line-height:1.35;color:var(--deep-wine);
-}
-.faq-q .chev{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;flex:none;background:var(--cream);color:var(--wine);transition:transform .45s var(--ease-out), background-color .3s ease, color .3s ease}
-.faq-q .chev .icon{width:18px;height:18px;stroke-width:2}
-.faq-q[aria-expanded="true"] .chev{transform:rotate(180deg);background:var(--wine);color:var(--cream)}
-.faq-a{padding:0 var(--s5) var(--s3) 0;font-size:17px}
-.faq-a p{margin:0;opacity:.88}
-.js .faq-a{display:grid;grid-template-rows:0fr;visibility:hidden;padding-bottom:0;transition:grid-template-rows .45s var(--ease-out), padding-bottom .45s var(--ease-out), visibility 0s linear .45s}
-.js .faq-a.is-open{grid-template-rows:1fr;visibility:visible;padding-bottom:var(--s3);transition:grid-template-rows .45s var(--ease-out), padding-bottom .45s var(--ease-out)}
-.faq-a-inner{overflow:hidden}
-@media (min-width:768px){ .faq-q{font-size:22px} }
-@media (min-width:1024px){
-  .faq-grid{grid-template-columns:.8fr 1.2fr;gap:var(--s10);align-items:start}
-  .faq-side{position:sticky;top:calc(var(--nav-h) + var(--s4))}
-}
-
 /* ---------- 12. Join ---------- */
 .join-shell{padding:var(--section-pad) 0}
+#join{display:block;margin-top:var(--s6)}
+@media (min-width:768px){ #join{margin-top:var(--s10)} }
 .join-grid{display:grid;gap:var(--s6);align-items:start}
 .join-intro .script{font-size:60px;display:block;margin:4px 0 var(--s2)}
 .join-intro > p{color:var(--cream-soft)}
@@ -405,7 +384,6 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
 .join-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s2);margin-bottom:var(--s3);padding-bottom:var(--s2);border-bottom:1px solid var(--wine-line)}
 .join-card-head h3{font-size:24px}
 .join-card-sub{margin:4px 0 0;font-size:15.5px;line-height:1.45;opacity:.85}
-.faq-intro{font-size:19px;opacity:.85;margin:var(--s2) 0 var(--s4);max-width:28ch}
 .join-card-head span{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:var(--cream);white-space:nowrap}
 @media (min-width:768px){ .join-card{padding:var(--s5)} .join-intro .script{font-size:80px} }
 @media (min-width:1024px){
@@ -541,7 +519,6 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
   <symbol id="i-chevs" viewBox="0 0 24 24"><path d="m6 17 5-5-5-5M13 17l5-5-5-5"/></symbol>
   <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
   <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
-  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
   <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></symbol>
   <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
@@ -558,7 +535,6 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
       <ul class="nav-links">
         <li><a href="#how-it-works">How it works</a></li>
         <li><a href="#program">The program</a></li>
-        <li><a href="#faq">FAQs</a></li>
       </ul>
     </nav>
 
@@ -576,7 +552,6 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
       <ul>
         <li><a href="#how-it-works">How it works <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-right"/></svg></a></li>
         <li><a href="#program">The program <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-right"/></svg></a></li>
-        <li><a href="#faq">FAQs <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-right"/></svg></a></li>
       </ul>
       <div class="menu-ctas">
         <a class="btn btn-wine" href="#join"><span>Join ReMind</span><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevs"/></svg></span></a>
@@ -744,43 +719,6 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
     </div>
   </section>
 
-  <!-- ============ STORIES (hidden until real, consented testimonials exist) ============ -->
-
-  <!-- ============ FAQ ============ -->
-  <section class="section" id="faq" aria-labelledby="faq-title">
-    <div class="container faq-grid" data-reveal>
-      <div class="faq-side">
-        <p class="pill-label"><span class="dot"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg></span>FAQs</p>
-        <h2 class="h2" id="faq-title">Still wondering?</h2>
-        <p class="faq-intro">Everything you need to know before you join.</p>
-        <a class="btn btn-wine" href="#join"><span>Join ReMind</span><span class="ic"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevs"/></svg></span></a>
-      </div>
-
-      <div class="faq-list">
-        <div class="faq-item">
-          <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">Who is ReMind for?<span class="chev" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-down"/></svg></span></button></h3>
-          <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><div class="faq-a-inner"><p>Women in perimenopause or menopause who want practical support for memory, focus, stress, sleep and wellbeing.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a8" id="faq-q8">Can I join if I’m not sure I’m in perimenopause?<span class="chev" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-down"/></svg></span></button></h3>
-          <div class="faq-a" id="faq-a8" role="region" aria-labelledby="faq-q8"><div class="faq-a-inner"><p>Yes, you’re very welcome. Many women aren’t sure at first. If you’ve noticed changes in your memory, focus, mood or sleep, ReMind can help, and you don’t need a diagnosis to join.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">How much time does it take?<span class="chev" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-down"/></svg></span></button></h3>
-          <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><div class="faq-a-inner"><p>About 5–10 minutes on most days, plus a 45-minute live session once a week.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a9" id="faq-q9">Does it cost anything?<span class="chev" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-down"/></svg></span></button></h3>
-          <div class="faq-a" id="faq-a9" role="region" aria-labelledby="faq-q9"><div class="faq-a-inner"><p>No. There are no fees to join ReMind, and your first one-on-one consultation is on us too.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">Is this medical treatment?<span class="chev" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-down"/></svg></span></button></h3>
-          <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6"><div class="faq-a-inner"><p>No. ReMind is an educational wellness program. Please speak to your doctor about any health concerns.</p></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ JOIN ============ -->
   <section id="join" aria-labelledby="join-title">
     <div class="shell join-shell on-wine">
@@ -938,7 +876,7 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
 <script>
 /* =========================================================
    ReMind landing page scripts — version 2 (vanilla JS)
-   Form, FAQ, menu and reveal logic are the same as version 1.
+   Form, menu and reveal logic are the same as version 1.
    ========================================================= */
 (function () {
   'use strict';
@@ -1104,22 +1042,6 @@ html:not(.js) .week-panels{display:grid;gap:var(--s2)}
       join.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
       var name = document.getElementById('f-name');
       if (name) setTimeout(function () { name.focus({ preventScroll: true }); }, reduceMotion ? 0 : 600);
-    });
-  });
-
-  /* ---------- 8. FAQ accordion (one open at a time) ---------- */
-  var faqButtons = document.querySelectorAll('.faq-q');
-  faqButtons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var wasOpen = btn.getAttribute('aria-expanded') === 'true';
-      faqButtons.forEach(function (other) {
-        other.setAttribute('aria-expanded', 'false');
-        document.getElementById(other.getAttribute('aria-controls')).classList.remove('is-open');
-      });
-      if (!wasOpen) {
-        btn.setAttribute('aria-expanded', 'true');
-        document.getElementById(btn.getAttribute('aria-controls')).classList.add('is-open');
-      }
     });
   });
 
